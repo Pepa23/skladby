@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>Title</title>
+
+        <!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- Our Custom CSS -->
+        <link rel="stylesheet" href="css/theme.css">
+        <!-- Scrollbar Custom CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+    </head>
+    <!--<style>
+    :root {
+                    /*ČERVENÁ*/
+            --barva-svetla: #f44336; 
+            --barva-tmava: #982921;
+            
+            /*RŮŽOVÁ*/
+            --barva-svetla: #e91e63; 
+            --barva-tmava: #a01544;
+            
+            /*SVĚTLE FIALOVÁ*/
+            --barva-svetla: #9c27b0; 
+            --barva-tmava: #681a75;
+            
+            /*TMAVĚ FIALOVÁ*/
+            --barva-svetla: #673ab7; 
+            --barva-tmava: #3f2471;
+            
+            /*TMAVĚ MODRÁ*/
+            --barva-svetla: #3f51b5; 
+            --barva-tmava: #232e6b;
+            
+            /*SVĚTLE MODRÁ*/
+            --barva-svetla: #2196f3; 
+            --barva-tmava: #16619c;
+            
+            /*SVĚTLE MODRÁ2*/
+            --barva-svetla: #03A9F4; 
+            --barva-tmava: #0177ad;
+            
+            /*SVĚTLE MODRÁ3*/
+            --barva-svetla: #00bcd4; 
+            --barva-tmava: #2f8994;
+            
+            /*TMAVĚ ZELENÁ*/
+            --barva-svetla: #009688; 
+            --barva-tmava: #006158;
+            
+            /*SVĚTLE ZELENÁ*/
+            --barva-svetla: #4caf50; 
+            --barva-tmava: #38803a;
+            
+            /*LIMETKOVÁ*/
+            --barva-svetla: #8bc34a; 
+            --barva-tmava: #689237;
+            
+            /*LIMETKOVÁ2*/
+            --barva-svetla: #cddc39; 
+            --barva-tmava: #828c24;
+            
+            /*ŽLUTÁ*/
+            --barva-svetla: #ffeb3b; 
+            --barva-tmava: #c7b82f;
+            
+            /*ORANŽOVÁ*/
+            --barva-svetla: #ffc107; 
+            --barva-tmava: #d6a000;
+            
+            /*ORANŽOVÁ2*/
+            --barva-svetla: #ff9800; 
+            --barva-tmava: #b36b00;
+            
+            /*TMAVĚ ORANŽOVÁ*/
+            --barva-svetla: #ff5722; 
+            --barva-tmava: #c5431a;
+            
+            /*HNĚDÁ*/
+            --barva-svetla: #795548; 
+            --barva-tmava: #563c33;
+            
+            /*ŠEDÁ*/
+            --barva-svetla: #9e9e9e; 
+            --barva-tmava: #6b6b6b;
+            
+            /*CYAN*/
+            //--barva-svetla: #607d8b;
+            //--barva-tmava: #3e515a;
+    }
+    </style>-->
+
+    <body>
+
+        <div class="wrapper">
+            <!-- Sidebar Holder -->
+            <nav id="sidebar">
+                <div id="dismiss">
+                    <i class="glyphicon glyphicon-arrow-left"></i>
+                </div>
+
+                <div class="sidebar-header">
+                    <h3>Menu</h3>
+                </div>
+
+                <ul class="list-unstyled components">
+                    <p>Nadpis</p>
+
+                    <li class="active">
+                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Nadpis</a>
+                        <ul class="collapse list-unstyled" id="homeSubmenu">
+                            <li><a href="#">Podnadpis</a></li>
+                            <li><a href="#">Podnadpis</a></li>
+                            <li><a href="#">Podnadpis</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Nadpis</a>
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Nadpis</a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                            <li><a href="#">Podnadpis</a></li>
+                            <li><a href="#">Podnadpis</a></li>
+                            <li><a href="#">Podnadpis</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Nadpis</a>
+                    </li>
+                </ul>
+
+                <ul class="list-unstyled CTAs">
+                    <li><a href="" class="download">Button</a></li>
+                    <li><a href="" class="article">Button</a></li>
+                </ul>
+            </nav>
+
+            <!-- Page Content Holder -->
+            <div id="content">
+
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+
+                        <div class="navbar-header">
+                            <button type="button" id="sidebarCollapse" class="btn btn-dark navbar-btn">
+                                <i class="glyphicon glyphicon-align-left"></i>
+                                <span> Menu</span>
+                            </button>
+
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span> 
+                            </button>
+                        </div>
+                        <div class="collapse navbar-collapse" id="myNavbar">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><button type="button" id="sidebarCollapse" class="btn btn-dark-nav navbar-btn"><a href="#"><span class="glyphicon glyphicon-user"></span> Registrace</a></button></li>
+                                <li><button type="button" id="sidebarCollapse" class="btn btn-dark-nav navbar-btn"><a href="#"><span class="glyphicon glyphicon-log-in"></span> Přihlášení</a></button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <div class="container">
+
+                    <!-- Introduction Row -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h1 class="page-header">Databáze hudby</h1>
+                            <h1>Aktuální vybráno:</h1>
+                            <div id="demoS" style="height: 30px; width: 30px; display: -webkit-inline-box;"></div>
+                            <div id="demoT" style="height: 30px; width: 30px; display: -webkit-inline-box;"></div>
+                            <br>
+                            <h1>Výběr (klikni na barvu):</h1>
+
+                            <div>
+
+
+                                <div onclick="myFunction1()" style="background-color: #f44336; height: 30px; width: 30px; display: -webkit-inline-box;"></div>
+                                <div onclick="myFunction1()" style="margin-right: 50px; background-color: #982921; height: 30px; width: 30px; display: -webkit-inline-box;"></div>
+
+                                <div onclick="myFunction2()" style="background-color: #e91e63; height: 30px; width: 30px; display: -webkit-inline-box;"></div>
+                                <div onclick="myFunction2()" style="margin-right: 50px; background-color: #a01544; height: 30px; width: 30px; display: -webkit-inline-box;"></div>
+
+                                <div onclick="myFunction3()" style="background-color: #9c27b0; height: 30px; width: 30px; display: -webkit-inline-box;"></div>
+                                <div onclick="myFunction3()" style="margin-right: 50px; background-color: #681a75; height: 30px; width: 30px; display: -webkit-inline-box;"></div>
+
+                                <div onclick="myFunction4()" style="background-color: #673ab7; height: 30px; width: 30px; display: -webkit-inline-box;"></div>
+                                <div onclick="myFunction4()" style="margin-right: 50px; background-color: #3f2471; height: 30px; width: 30px; display: -webkit-inline-box;"></div>
+                            </div>
+
+                            <div>
+                                <div onclick="myFunction5()" style="background-color: #3f51b5; height: 30px; width: 30px; display: -webkit-inline-box;"></div>
+                                <div onclick="myFunction5()" style="margin-right: 50px; background-color: #232e6b; height: 30px; width: 30px; display: -webkit-inline-box;"></div>
+
+                                <div onclick="myFunction6()" style="background-color: #2196f3; height: 30px; width: 30px; display: -webkit-inline-box;"></div>
+                                <div onclick="myFunction6()" style="margin-right: 50px; background-color: #16619c; height: 30px; width: 30px; display: -webkit-inline-box;"></div>
+
+                                <div onclick="myFunction7()" style="background-color: #03A9F4; height: 30px; width: 30px; display: -webkit-inline-box;"></div>
+                                <div onclick="myFunction7()" style="margin-right: 50px; background-color: #0177ad; height: 30px; width: 30px; display: -webkit-inline-box;"></div>
+
+                                <div onclick="myFunction8()" style="background-color: #00bcd4; height: 30px; width: 30px; display: -webkit-inline-box;"></div>
+                                <div onclick="myFunction8()" style="margin-right: 50px; background-color: #2f8994; height: 30px; width: 30px; display: -webkit-inline-box;"></div>
+                            </div>
+                            <div>
+                                <div onclick="myFunction9()" style="background-color: #009688; height: 30px; width: 30px; display: -webkit-inline-box;"></div>
+                                <div onclick="myFunction9()" style="margin-right: 50px; background-color: #006158; height: 30px; width: 30px; display: -webkit-inline-box;"></div>
+
+                                <div onclick="myFunction10()" style="background-color: #4caf50; height: 30px; width: 30px; display: -webkit-inline-box;"></div>
+                                <div onclick="myFunction10()" style="margin-right: 50px; background-color: #38803a; height: 30px; width: 30px; display: -webkit-inline-box;"></div>
+
+                                <div onclick="myFunction11()" style="background-color: #8bc34a; height: 30px; width: 30px; display: -webkit-inline-box;"></div>
+                                <div onclick="myFunction11()" style="margin-right: 50px; background-color: #689237; height: 30px; width: 30px; display: -webkit-inline-box;"></div>
+
+                                <div onclick="myFunction12()" style="background-color: #cddc39; height: 30px; width: 30px; display: -webkit-inline-box;"></div>
+                                <div onclick="myFunction12()" style="margin-right: 50px; background-color: #828c24; height: 30px; width: 30px; display: -webkit-inline-box;"></div>
+                            </div>
+                            <div>
+                                <div onclick="myFunction13()" style="background-color: #ffeb3b; height: 30px; width: 30px; display: -webkit-inline-box;"></div>
+                                <div onclick="myFunction13()" style="margin-right: 50px; background-color: #c7b82f; height: 30px; width: 30px; display: -webkit-inline-box;"></div>
+
+                                <div onclick="myFunction14()" style="background-color: #ffc107; height: 30px; width: 30px; display: -webkit-inline-box;"></div>
+                                <div onclick="myFunction14()" style="margin-right: 50px; background-color: #d6a000; height: 30px; width: 30px; display: -webkit-inline-box;"></div>
+
+                                <div onclick="myFunction15()" style="background-color: #ff9800; height: 30px; width: 30px; display: -webkit-inline-box;"></div>
+                                <div onclick="myFunction15()" style="margin-right: 50px; background-color: #b36b00; height: 30px; width: 30px; display: -webkit-inline-box;"></div>
+
+                                <div onclick="myFunction16()" style="background-color: #ff5722; height: 30px; width: 30px; display: -webkit-inline-box;"></div>
+                                <div onclick="myFunction16()" style="margin-right: 50px; background-color: #c5431a; height: 30px; width: 30px; display: -webkit-inline-box;"></div>
+                            </div>
+                            <div>
+                                <div onclick="myFunction17()" style="background-color: #795548; height: 30px; width: 30px; display: -webkit-inline-box;"></div>
+                                <div onclick="myFunction17()" style="margin-right: 50px; background-color: #563c33; height: 30px; width: 30px; display: -webkit-inline-box;"></div>
+
+                                <div onclick="myFunction18()" style="background-color: #9e9e9e; height: 30px; width: 30px; display: -webkit-inline-box;"></div>
+                                <div onclick="myFunction18()" style="margin-right: 50px; background-color: #6b6b6b; height: 30px; width: 30px; display: -webkit-inline-box;"></div>
+
+                                <div onclick="myFunction19()" style="background-color: #607d8b; height: 30px; width: 30px; display: -webkit-inline-box;"></div>
+                                <div onclick="myFunction19()" style="margin-right: 50px; background-color: #3e515a; height: 30px; width: 30px; display: -webkit-inline-box;"></div>
+
+
+                            </div>
+                            <script>
+                                function myFunction1() {
+                                    let root = document.documentElement;
+                                    root.style.setProperty('--barva-svetla', "#f44336");
+                                    root.style.setProperty('--barva-tmava', "#982921");
+                                }
+                                function myFunction2() {
+                                    let root = document.documentElement;
+                                    root.style.setProperty('--barva-svetla', "#e91e63");
+                                    root.style.setProperty('--barva-tmava', "#a01544");
+                                }
+                                function myFunction3() {
+                                    let root = document.documentElement;
+                                    root.style.setProperty('--barva-svetla', "#9c27b0");
+                                    root.style.setProperty('--barva-tmava', "#681a75");
+                                }
+                                function myFunction4() {
+                                    let root = document.documentElement;
+                                    root.style.setProperty('--barva-svetla', "#673ab7");
+                                    root.style.setProperty('--barva-tmava', "#3f2471");
+                                }
+                                function myFunction5() {
+                                    let root = document.documentElement;
+                                    root.style.setProperty('--barva-svetla', "#3f51b5");
+                                    root.style.setProperty('--barva-tmava', "#232e6b");
+                                }
+                                function myFunction6() {
+                                    let root = document.documentElement;
+                                    root.style.setProperty('--barva-svetla', "#2196f3");
+                                    root.style.setProperty('--barva-tmava', "#16619c");
+                                }
+                                function myFunction7() {
+                                    let root = document.documentElement;
+                                    root.style.setProperty('--barva-svetla', "#03A9F4");
+                                    root.style.setProperty('--barva-tmava', "#0177ad");
+                                }
+                                function myFunction8() {
+                                    let root = document.documentElement;
+                                    root.style.setProperty('--barva-svetla', "#00bcd4");
+                                    root.style.setProperty('--barva-tmava', "#2f8994");
+                                }
+                                function myFunction9() {
+                                    let root = document.documentElement;
+                                    root.style.setProperty('--barva-svetla', "#009688");
+                                    root.style.setProperty('--barva-tmava', "#006158");
+                                }
+                                function myFunction10() {
+                                    let root = document.documentElement;
+                                    root.style.setProperty('--barva-svetla', "#4caf50");
+                                    root.style.setProperty('--barva-tmava', "#38803a");
+                                }
+                                function myFunction11() {
+                                    let root = document.documentElement;
+                                    root.style.setProperty('--barva-svetla', "#8bc34a");
+                                    root.style.setProperty('--barva-tmava', "#689237");
+                                }
+                                function myFunction12() {
+                                    let root = document.documentElement;
+                                    root.style.setProperty('--barva-svetla', "#cddc39");
+                                    root.style.setProperty('--barva-tmava', "#828c24");
+                                }
+                                function myFunction13() {
+                                    let root = document.documentElement;
+                                    root.style.setProperty('--barva-svetla', "#ffeb3b");
+                                    root.style.setProperty('--barva-tmava', "#c7b82f");
+                                }
+                                function myFunction14() {
+                                    let root = document.documentElement;
+                                    root.style.setProperty('--barva-svetla', "#ffc107");
+                                    root.style.setProperty('--barva-tmava', "#d6a000");
+                                }
+                                function myFunction15() {
+                                    let root = document.documentElement;
+                                    root.style.setProperty('--barva-svetla', "#ff9800");
+                                    root.style.setProperty('--barva-tmava', "#b36b00");
+                                }
+                                function myFunction16() {
+                                    let root = document.documentElement;
+                                    root.style.setProperty('--barva-svetla', "#ff5722");
+                                    root.style.setProperty('--barva-tmava', "#c5431a");
+                                }
+                                function myFunction17() {
+                                    let root = document.documentElement;
+                                    root.style.setProperty('--barva-svetla', "#795548");
+                                    root.style.setProperty('--barva-tmava', "#563c33");
+                                }
+                                function myFunction18() {
+                                    let root = document.documentElement;
+                                    root.style.setProperty('--barva-svetla', "#9e9e9e");
+                                    root.style.setProperty('--barva-tmava', "#6b6b6b");
+                                }
+                                function myFunction19() {
+                                    let root = document.documentElement;
+                                    root.style.setProperty('--barva-svetla', "#607d8b");
+                                    root.style.setProperty('--barva-tmava', "#3e515a");
+                                }
+
+                            </script>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, explicabo dolores ipsam aliquam inventore corrupti eveniet quisquam quod totam laudantium repudiandae obcaecati ea consectetur debitis velit facere nisi expedita vel?</p>
+                        </div>
+
+                    </div>
+
+                    <!-- Team Members Row -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h2 class="page-header">Autoři</h2>
+                        </div>
+                        <div class="col-lg-4 col-sm-6 text-center mb-4">
+                            <a href="http://josef.plasek.zdenekhrdina.cz/skladby/assets/theme/autor.html"><img class="rounded-circle img-fluid d-block mx-auto" src="http://josef.plasek.zdenekhrdina.cz/skladby/assets/images/autori/CalvinHarris.jpg" alt="" width="200px" height="200px"></a>
+                            <h3>Calvin Harris
+                                <small>Job Title</small>
+                            </h3>
+                            <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+                        </div>
+                        <div class="col-lg-4 col-sm-6 text-center mb-4">
+                            <a href="http://josef.plasek.zdenekhrdina.cz/skladby/assets/theme/autor.html"><img class="rounded-circle img-fluid d-block mx-auto" src="http://josef.plasek.zdenekhrdina.cz/skladby/assets/images/autori/CalvinHarris.jpg" alt="" width="200px" height="200px"></a>
+                            <h3>Calvin Harris
+                                <small>Job Title</small>
+                            </h3>
+                            <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+                        </div>
+						<div class="col-lg-4 col-sm-6 text-center mb-4">
+                            <a href="http://josef.plasek.zdenekhrdina.cz/skladby/assets/theme/autor.html"><img class="rounded-circle img-fluid d-block mx-auto" src="http://josef.plasek.zdenekhrdina.cz/skladby/assets/images/autori/CalvinHarris.jpg" alt="" width="200px" height="200px"></a>
+                            <h3>Calvin Harris
+                                <small>Job Title</small>
+                            </h3>
+                            <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+                        </div>
+						<div class="col-lg-4 col-sm-6 text-center mb-4">
+                            <a href="http://josef.plasek.zdenekhrdina.cz/skladby/assets/theme/autor.html"><img class="rounded-circle img-fluid d-block mx-auto" src="http://josef.plasek.zdenekhrdina.cz/skladby/assets/images/autori/CalvinHarris.jpg" alt="" width="200px" height="200px"></a>
+                            <h3>Calvin Harris
+                                <small>Job Title</small>
+                            </h3>
+                            <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+                        </div>
+						<div class="col-lg-4 col-sm-6 text-center mb-4">
+                            <a href="http://josef.plasek.zdenekhrdina.cz/skladby/assets/theme/autor.html"><img class="rounded-circle img-fluid d-block mx-auto" src="http://josef.plasek.zdenekhrdina.cz/skladby/assets/images/autori/CalvinHarris.jpg" alt="" width="200px" height="200px"></a>
+                            <h3>Calvin Harris
+                                <small>Job Title</small>
+                            </h3>
+                            <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+                        </div>
+						<div class="col-lg-4 col-sm-6 text-center mb-4">
+                            <a href="http://josef.plasek.zdenekhrdina.cz/skladby/assets/theme/autor.html"><img class="rounded-circle img-fluid d-block mx-auto" src="http://josef.plasek.zdenekhrdina.cz/skladby/assets/images/autori/CalvinHarris.jpg" alt="" width="200px" height="200px"></a>
+                            <h3>Calvin Harris
+                                <small>Job Title</small>
+                            </h3>
+                            <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+                        </div>
+						<div class="col-lg-4 col-sm-6 text-center mb-4">
+                            <a href="http://josef.plasek.zdenekhrdina.cz/skladby/assets/theme/autor.html"><img class="rounded-circle img-fluid d-block mx-auto" src="http://josef.plasek.zdenekhrdina.cz/skladby/assets/images/autori/CalvinHarris.jpg" alt="" width="200px" height="200px"></a>
+                            <h3>Calvin Harris
+                                <small>Job Title</small>
+                            </h3>
+                            <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+                        </div>
+						<div class="col-lg-4 col-sm-6 text-center mb-4">
+                            <a href="http://josef.plasek.zdenekhrdina.cz/skladby/assets/theme/autor.html"><img class="rounded-circle img-fluid d-block mx-auto" src="http://josef.plasek.zdenekhrdina.cz/skladby/assets/images/autori/CalvinHarris.jpg" alt="" width="200px" height="200px"></a>
+                            <h3>Calvin Harris
+                                <small>Job Title</small>
+                            </h3>
+                            <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+                        </div>
+						<div class="col-lg-4 col-sm-6 text-center mb-4">
+                            <a href="http://josef.plasek.zdenekhrdina.cz/skladby/assets/theme/autor.html"><img class="rounded-circle img-fluid d-block mx-auto" src="http://josef.plasek.zdenekhrdina.cz/skladby/assets/images/autori/CalvinHarris.jpg" alt="" width="200px" height="200px"></a>
+                            <h3>Calvin Harris
+                                <small>Job Title</small>
+                            </h3>
+                            <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+                        </div>
+						<div class="col-lg-4 col-sm-6 text-center mb-4">
+                            <a href="http://josef.plasek.zdenekhrdina.cz/skladby/assets/theme/autor.html"><img class="rounded-circle img-fluid d-block mx-auto" src="http://josef.plasek.zdenekhrdina.cz/skladby/assets/images/autori/CalvinHarris.jpg" alt="" width="200px" height="200px"></a>
+                            <h3>Calvin Harris
+                                <small>Job Title</small>
+                            </h3>
+                            <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+                        </div>
+						<div class="col-lg-4 col-sm-6 text-center mb-4">
+                            <a href="http://josef.plasek.zdenekhrdina.cz/skladby/assets/theme/autor.html"><img class="rounded-circle img-fluid d-block mx-auto" src="http://josef.plasek.zdenekhrdina.cz/skladby/assets/images/autori/CalvinHarris.jpg" alt="" width="200px" height="200px"></a>
+                            <h3>Calvin Harris
+                                <small>Job Title</small>
+                            </h3>
+                            <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="overlay"></div>
+
+
+        <!-- jQuery CDN -->
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <!-- Bootstrap Js CDN -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- jQuery Custom Scroller CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+        <script type="text/javascript">
+			$(document).ready(function () {
+				$("#sidebar").mCustomScrollbar({
+					theme: "minimal"
+				});
+
+				$('#dismiss, .overlay').on('click', function () {
+					$('#sidebar').removeClass('active');
+					$('.overlay').fadeOut();
+				});
+
+				$('#sidebarCollapse').on('click', function () {
+					$('#sidebar').addClass('active');
+					$('.overlay').fadeIn();
+					$('.collapse.in').toggleClass('in');
+					$('a[aria-expanded=true]').attr('aria-expanded', 'false');
+				});
+			});
+        </script>
+    </body>
+</html>

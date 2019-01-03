@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>Title</title>
+
+        <!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- Our Custom CSS -->
+        <link rel="stylesheet" href="css/theme.css">
+        <!-- Scrollbar Custom CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+    </head>
+    <style>
+    :root {
+        --barva-svetla: #f44336; 
+        --barva-tmava: #982921;
+    }
+    </style>
+
+    <body>
+
+        <div class="wrapper">
+            <!-- Sidebar Holder -->
+            <nav id="sidebar">
+                <div id="dismiss">
+                    <i class="glyphicon glyphicon-arrow-left"></i>
+                </div>
+
+                <div class="sidebar-header">
+                    <h3>Menu</h3>
+                </div>
+
+                <ul class="list-unstyled components">
+                    <p>Nadpis</p>
+
+                    <li class="active">
+                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Nadpis</a>
+                        <ul class="collapse list-unstyled" id="homeSubmenu">
+                            <li><a href="#">Podnadpis</a></li>
+                            <li><a href="#">Podnadpis</a></li>
+                            <li><a href="#">Podnadpis</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Nadpis</a>
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Nadpis</a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                            <li><a href="#">Podnadpis</a></li>
+                            <li><a href="#">Podnadpis</a></li>
+                            <li><a href="#">Podnadpis</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Nadpis</a>
+                    </li>
+                </ul>
+
+                <ul class="list-unstyled CTAs">
+                    <li><a href="" class="download">Button</a></li>
+                    <li><a href="http://josef.plasek.zdenekhrdina.cz/skladby/assets/theme/barvy.html" class="article">BARVY</a></li>
+                </ul>
+            </nav>
+
+            <!-- Page Content Holder -->
+            <div id="content">
+
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+
+                        <div class="navbar-header">
+                            <button type="button" id="sidebarCollapse" class="btn btn-dark navbar-btn">
+                                <i class="glyphicon glyphicon-align-left"></i>
+                                <span> Menu</span>
+                            </button>
+
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span> 
+                            </button>
+                        </div>
+                        <div class="collapse navbar-collapse" id="myNavbar">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><button type="button" id="sidebarCollapse" class="btn btn-dark-nav navbar-btn"><a href="#"><span class="glyphicon glyphicon-user"></span> Registrace</a></button></li>
+                                <li><button type="button" id="sidebarCollapse" class="btn btn-dark-nav navbar-btn"><a href="#"><span class="glyphicon glyphicon-log-in"></span> Přihlášení</a></button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <div class="container">
+
+                    <!-- Introduction Row -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h1 class="page-header">Databáze hudby</h1>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, explicabo dolores ipsam aliquam inventore corrupti eveniet quisquam quod totam laudantium repudiandae obcaecati ea consectetur debitis velit facere nisi expedita vel?</p>
+                        </div>
+
+                    </div>
+
+                    <!-- Team Members Row -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h2 class="page-header">Autoři</h2>
+                        </div>
+                        <div class="col-lg-4 col-sm-6 text-center mb-4">
+                            <a href="http://josef.plasek.zdenekhrdina.cz/skladby/assets/theme/autor.html"><img class="rounded-circle img-fluid d-block mx-auto" src="http://josef.plasek.zdenekhrdina.cz/skladby/assets/images/autori/CalvinHarris.jpg" alt="" width="200px" height="200px"></a>
+                            <h3>Calvin Harris
+                                <small>Job Title</small>
+                            </h3>
+                            <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+                        </div>
+                        <div class="col-lg-4 col-sm-6 text-center mb-4">
+                            <a href="http://josef.plasek.zdenekhrdina.cz/skladby/assets/theme/autor.html"><img class="rounded-circle img-fluid d-block mx-auto" src="http://josef.plasek.zdenekhrdina.cz/skladby/assets/images/autori/CalvinHarris.jpg" alt="" width="200px" height="200px"></a>
+                            <h3>Calvin Harris
+                                <small>Job Title</small>
+                            </h3>
+                            <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+                        </div>
+						<div class="col-lg-4 col-sm-6 text-center mb-4">
+                            <a href="http://josef.plasek.zdenekhrdina.cz/skladby/assets/theme/autor.html"><img class="rounded-circle img-fluid d-block mx-auto" src="http://josef.plasek.zdenekhrdina.cz/skladby/assets/images/autori/CalvinHarris.jpg" alt="" width="200px" height="200px"></a>
+                            <h3>Calvin Harris
+                                <small>Job Title</small>
+                            </h3>
+                            <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+                        </div>
+						<div class="col-lg-4 col-sm-6 text-center mb-4">
+                            <a href="http://josef.plasek.zdenekhrdina.cz/skladby/assets/theme/autor.html"><img class="rounded-circle img-fluid d-block mx-auto" src="http://josef.plasek.zdenekhrdina.cz/skladby/assets/images/autori/CalvinHarris.jpg" alt="" width="200px" height="200px"></a>
+                            <h3>Calvin Harris
+                                <small>Job Title</small>
+                            </h3>
+                            <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+                        </div>
+						<div class="col-lg-4 col-sm-6 text-center mb-4">
+                            <a href="http://josef.plasek.zdenekhrdina.cz/skladby/assets/theme/autor.html"><img class="rounded-circle img-fluid d-block mx-auto" src="http://josef.plasek.zdenekhrdina.cz/skladby/assets/images/autori/CalvinHarris.jpg" alt="" width="200px" height="200px"></a>
+                            <h3>Calvin Harris
+                                <small>Job Title</small>
+                            </h3>
+                            <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+                        </div>
+						<div class="col-lg-4 col-sm-6 text-center mb-4">
+                            <a href="http://josef.plasek.zdenekhrdina.cz/skladby/assets/theme/autor.html"><img class="rounded-circle img-fluid d-block mx-auto" src="http://josef.plasek.zdenekhrdina.cz/skladby/assets/images/autori/CalvinHarris.jpg" alt="" width="200px" height="200px"></a>
+                            <h3>Calvin Harris
+                                <small>Job Title</small>
+                            </h3>
+                            <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+                        </div>
+						<div class="col-lg-4 col-sm-6 text-center mb-4">
+                            <a href="http://josef.plasek.zdenekhrdina.cz/skladby/assets/theme/autor.html"><img class="rounded-circle img-fluid d-block mx-auto" src="http://josef.plasek.zdenekhrdina.cz/skladby/assets/images/autori/CalvinHarris.jpg" alt="" width="200px" height="200px"></a>
+                            <h3>Calvin Harris
+                                <small>Job Title</small>
+                            </h3>
+                            <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+                        </div>
+						<div class="col-lg-4 col-sm-6 text-center mb-4">
+                            <a href="http://josef.plasek.zdenekhrdina.cz/skladby/assets/theme/autor.html"><img class="rounded-circle img-fluid d-block mx-auto" src="http://josef.plasek.zdenekhrdina.cz/skladby/assets/images/autori/CalvinHarris.jpg" alt="" width="200px" height="200px"></a>
+                            <h3>Calvin Harris
+                                <small>Job Title</small>
+                            </h3>
+                            <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+                        </div>
+						<div class="col-lg-4 col-sm-6 text-center mb-4">
+                            <a href="http://josef.plasek.zdenekhrdina.cz/skladby/assets/theme/autor.html"><img class="rounded-circle img-fluid d-block mx-auto" src="http://josef.plasek.zdenekhrdina.cz/skladby/assets/images/autori/CalvinHarris.jpg" alt="" width="200px" height="200px"></a>
+                            <h3>Calvin Harris
+                                <small>Job Title</small>
+                            </h3>
+                            <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+                        </div>
+						<div class="col-lg-4 col-sm-6 text-center mb-4">
+                            <a href="http://josef.plasek.zdenekhrdina.cz/skladby/assets/theme/autor.html"><img class="rounded-circle img-fluid d-block mx-auto" src="http://josef.plasek.zdenekhrdina.cz/skladby/assets/images/autori/CalvinHarris.jpg" alt="" width="200px" height="200px"></a>
+                            <h3>Calvin Harris
+                                <small>Job Title</small>
+                            </h3>
+                            <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+                        </div>
+						<div class="col-lg-4 col-sm-6 text-center mb-4">
+                            <a href="http://josef.plasek.zdenekhrdina.cz/skladby/assets/theme/autor.html"><img class="rounded-circle img-fluid d-block mx-auto" src="http://josef.plasek.zdenekhrdina.cz/skladby/assets/images/autori/CalvinHarris.jpg" alt="" width="200px" height="200px"></a>
+                            <h3>Calvin Harris
+                                <small>Job Title</small>
+                            </h3>
+                            <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="overlay"></div>
+
+
+        <!-- jQuery CDN -->
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <!-- Bootstrap Js CDN -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- jQuery Custom Scroller CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+        <script type="text/javascript">
+			$(document).ready(function () {
+				$("#sidebar").mCustomScrollbar({
+					theme: "minimal"
+				});
+
+				$('#dismiss, .overlay').on('click', function () {
+					$('#sidebar').removeClass('active');
+					$('.overlay').fadeOut();
+				});
+
+				$('#sidebarCollapse').on('click', function () {
+					$('#sidebar').addClass('active');
+					$('.overlay').fadeIn();
+					$('.collapse.in').toggleClass('in');
+					$('a[aria-expanded=true]').attr('aria-expanded', 'false');
+				});
+			});
+        </script>
+    </body>
+</html>

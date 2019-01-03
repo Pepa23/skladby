@@ -1,0 +1,102 @@
+.dropdown-toggle::after {
+    display: inherit;
+    position: inherit;
+    top: 50%;
+    right: 20px;
+    transform: translateY(50%); 
+}
+
+.navbar-nav .dropdown-menu {
+    position: static;
+    float: none;
+    padding-left: 10px;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.popis {
+	margin-top: 25px;
+}
+
+.aktivni {
+	margin-bottom: 0px;
+	color: #a0a0a0;
+	font-style: normal;
+}
+
+.aktivni:hover {
+	margin-bottom: 0px;
+	color: #6b6b6b;
+	font-style: normal;
+}
+
+.neaktivni {
+	margin-bottom: 0px;
+	color: #1bb2ca;
+	font-style: normal;
+}
+
+.dark {
+	color: black;
+}
+
+.odsazeni-nadpis {
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.rounded-circle {
+  padding: 10px;
+  border-radius: 50%;
+  transition: transform .2s; 
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.autor {
+  padding: 10px;
+  border-radius: 50%;
+  transition: transform .2s; 
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.rounded-circle:hover {
+  transform: scale(1.2);
+} 
+
+.album {
+  padding: 10px;
+  transition: transform .2s; 
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.album:hover {
+  transform: scale(1.2);
+} 
+
+.album-ctverec {
+  padding: 10px;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.bg-light-color {
+    background-color: #1bb2ca0a!important;
+}
+
+@media (max-width: 768px) {
+	.table {
+		width: 100%;
+		zoom: 50%;
+		max-width: 100%;
+		margin-bottom: 20px;
+	}
+}
